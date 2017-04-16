@@ -15,7 +15,7 @@ var gulp      = require('gulp'), // Подключаем Gulp
     uglify      = require('gulp-uglify');
     minifyCss   = require('gulp-minify-css');
 
-gulp.task('html', ['clean', 'sass', 'img'], function () {
+gulp.task('html', ['clean', 'sass', 'bower', 'img'], function () {
     return gulp.src('app/*.html')
         .pipe(useref())
         .pipe(gulpif('*.js', uglify()))
